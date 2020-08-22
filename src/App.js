@@ -1,19 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Header from './Components/Header/Header'
+import Login from './Components/Login/Login'
+import './App.css'
 
-function App() {
-  const todos = [
-    'Go to market',
-    'Buy food',
-    'Make dinner'
-  ];
-  let todoElements = todos.map(ele => <li>{ele}</li>)
-  return (
-    <div className="App">
-      <ul>
-        {todoElements}
-      </ul>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Header></Header>
+        <Login></Login>
+      </div>
+    );
+  }
 }
 
 export default App;
